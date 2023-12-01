@@ -138,6 +138,9 @@ gvfs-mtp
 networkmanager
 android-file-transfer
 sddm
+xorg-xwayland
+qt5-wayland
+qt6-wayland
 
 #Desktop
 brightnessctl
@@ -186,3 +189,5 @@ parch-branding
 parch-pacman
 parch-hypr
 dracula-gtk-theme
+parch-wallpapers
+
