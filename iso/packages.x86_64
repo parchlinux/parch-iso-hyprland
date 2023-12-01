@@ -137,15 +137,43 @@ gvfs
 gvfs-mtp
 networkmanager
 android-file-transfer
+sddm
 
 #Desktop
+brightnessctl
+cliphist
+dunst
+fish
+grim
+hyprland
+imagemagick
+kitty
+libva-intel-driver
+libva
+otf-font-awesome
+pipewire-pulse
+polkit-kde-agent
+slurp
+starship
+swappy
+swaybg
+swaylock
+ttf-firacode-nerd
+waybar
+wf-recorder
+wofi
+thunar
+engrampa
+unzip
+unrar
 
 #systemutils
 btop
 xdg-user-dirs
 packagekit-qt5
 neofetch-git
-ttf-ms-fonts
+ttf-dejavu
+vazirmatn-fonts
 firefox
 
 #parchlinuxstuff
@@ -156,3 +184,5 @@ paru
 parch-emoji-ios
 parch-branding
 parch-pacman
+parch-hypr
+dracula-gtk-theme
