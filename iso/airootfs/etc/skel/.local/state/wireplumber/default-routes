@@ -1,0 +1,3 @@
+[default-routes]
+alsa_card.pci-0000_00_1f.3:output:analog-output-lineout={"channelVolumes":[0.091123, 0.091123], "mute":false, "latencyOffsetNsec":0, "channelMap":["FL", "FR"]}
+alsa_card.pci-0000_00_1f.3:profile:output:analog-stereo+input:analog-stereo=["analog-output-lineout"]

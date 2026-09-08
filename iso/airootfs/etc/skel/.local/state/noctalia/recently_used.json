@@ -1,0 +1,8 @@
+{
+  "Applications": [
+    "/usr/share/applications/org.kde.dolphin.desktop",
+    "/usr/share/applications/qt6ct.desktop",
+    "/usr/share/applications/io.github.bluemancz.hyprmod.desktop",
+    "/usr/share/applications/kvantummanager.desktop"
+  ]
+}

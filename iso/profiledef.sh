@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # shellcheck disable=SC2034
 
-iso_name="Parchlinux"
-iso_label="PARCH_$(date +%Y%m)"
+iso_name="Parchlinux-Hyprland"
+iso_label="PARCHLINUX_HYPRLAND_$(date +%Y%m)"
 iso_publisher="Parch Linux <https://parchlinux.com>"
 iso_application="Parch Linux Live/Rescue CD"
 iso_version="$(date +%Y.%m.%d)"
