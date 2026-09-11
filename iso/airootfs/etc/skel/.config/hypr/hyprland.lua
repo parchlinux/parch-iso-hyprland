@@ -28,9 +28,7 @@ hl.animation({ leaf = "layersOut",     enabled = true,  speed = 1.5,  bezier = "
 hl.animation({ leaf = "fadeLayersIn",  enabled = true,  speed = 1.79, bezier = "almostLinear" })
 hl.animation({ leaf = "fadeLayersOut", enabled = true,  speed = 1.39, bezier = "almostLinear" })
 hl.animation({ leaf = "zoomFactor",    enabled = true,  speed = 7,    bezier = "quick" })
-hl.animation({leaf = "workspaces",enabled = true,speed = 8,bezier = "default",style = "slide"})
-hl.animation({leaf = "workspacesIn",enabled = true,speed = 8,bezier = "default",style = "slide"})
-hl.animation({leaf = "workspacesOut",enabled = true,speed = 8,bezier = "default",style = "slide"})
+
 
 
 -- Environment
@@ -40,7 +38,7 @@ hl.env("QT_QPA_PLATFORMTHEME", "qt6ct")
 
 
 -- Keybinds
-local mainMod = "SUPER"
+mainMod = "SUPER"
 
 hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd(terminal))
 local closeWindowBind = hl.bind(mainMod .. " + C", hl.dsp.window.close())
@@ -91,28 +89,6 @@ hl.bind("XF86AudioPlay",  hl.dsp.exec_cmd("playerctl play-pause"), { locked = tr
 hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = true })
 
 
--- Screenshot(Noctalia shell)
-
-hl.bind("CTRL + SHIFT + S ",hl.dsp.exec_cmd("noctalia msg screenshot-region"))
-hl.bind("CTRL + S",hl.dsp.exec_cmd("noctalia msg screenshot-fullscreen"))
-
-
---Overview toggle
-hl.bind("SUPER + TAB",hl.dsp.exec_cmd("qs -p .local/share/quickshell-overview/shell.qml ipc call overview toggle"))
-
--- Layout Switch
-
-hl.bind(mainMod .. " + ALT + E", function()
-    local layout = hl.get_config("general.layout")
-    if layout == "master" then
-        hl.config({ general = { layout = "dwindle" } })
-    elseif layout == "dwindle" then
-        hl.config({ general = { layout = "scrolling" } })
-    else
-        hl.config({ general = { layout = "master" } })
-    end
-end, { desc = "Cycle master/dwindle/scrolling layout" })
-
 -- Windows and Workspaces
 
 local suppressMaximizeRule = hl.window_rule({
@@ -149,8 +125,6 @@ hl.window_rule({
 
 
 
-
-
 -- Workspaces
 hl.workspace_rule({
     workspace = "1",
@@ -184,6 +158,14 @@ hl.workspace_rule({
     workspace = "8",
     persistent = true,
 })
+hl.workspace_rule({
+    workspace = "9",
+    persistent = true,
+})
+hl.workspace_rule({
+   workspace = "10",
+   persistent = true,
+})
 
 -- Autostart
 hl.on("hyprland.start", function()
@@ -191,18 +173,15 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("qs -p .local/share/quickshell-overview/shell.qml")
 end)
 
-
-
 -- HyprMod managed settings
 require("hyprland-gui")
 
 -- For Noctalia Color templates
 require("noctalia").apply_theme()
 
-
-
-
-
+-- Parch Linux configs
+require("parch-keybinds")
+require("parch-animations")
 
 hl.window_rule({
     name = "parch-hyprland-cheatsheet",
@@ -218,7 +197,7 @@ hl.window_rule({
 
 
 
--- Appearance Settings
+-- Appearance and Other Settings
 hl.config({
     decoration = {
         blur = {
@@ -235,5 +214,10 @@ hl.config({
     },
     input = {
         kb_layout = "us,ir",
+    },
+    misc = {
+        disable_splash_rendering = true,
+	disable_hyprland_logo = true,
+        force_default_wallpaper = 0,
     },
 })

@@ -137,6 +137,11 @@ xorg-xinit
 zsh
 archlinux-keyring
 openssl
+qt6-virtualkeyboard
+breeze
+qt6-declarative
+qt6-svg
+qt6-5compat
 
 #Desktop
 xorg
@@ -147,11 +152,13 @@ dastore
 shelly
 parch-base-config
 pdm
+parch-welcome
 parch-kernel-manager
 parch-iso-writer
 parchdroid
 pacman-contrib
 uwsm
+breeze-cursors
 
 #systemutils
 btop
