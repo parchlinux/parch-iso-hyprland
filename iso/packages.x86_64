@@ -145,6 +145,8 @@ qt6-5compat
 
 #Desktop
 xorg
+sddm
+sddm-noctalia-parch
 bash-completion
 networkmanager
 parch-grub
@@ -203,6 +205,7 @@ fastfetch
 
 #Hyprland
 hyprland
+parch-hyprland-config
 cava
 xorg-xwayland
 xdg-desktop-portal-hyprland
@@ -220,7 +223,6 @@ kitty
 noctalia
 playerctl
 quickshell
-sddm
 gwenview
 elisa
 haruna
