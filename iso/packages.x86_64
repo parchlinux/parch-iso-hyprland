@@ -161,6 +161,7 @@ parchdroid
 pacman-contrib
 uwsm
 breeze-cursors
+hyprpolkitagent
 
 #systemutils
 btop
@@ -210,7 +211,6 @@ cava
 xorg-xwayland
 xdg-desktop-portal-hyprland
 hyprland-qt-support
-polkit-kde-agent
 qt6-wayland
 qt5-wayland
 kvantum

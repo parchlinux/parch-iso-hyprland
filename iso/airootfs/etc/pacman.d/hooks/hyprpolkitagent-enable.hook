@@ -1,0 +1,10 @@
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Type = Package
+Target = hyprpolkitagent
+
+[Action]
+Description = Enabling hyprpolkitagent user service globally...
+When = PostTransaction
+Exec = /usr/bin/systemctl --global enable hyprpolkitagent.service
