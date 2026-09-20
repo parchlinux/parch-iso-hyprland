@@ -107,6 +107,8 @@ sg3_utils
 smartmontools
 sof-firmware
 noto-fonts-cjk
+noto-fonts
+noto-fonts-extra
 squashfs-tools
 sudo
 syslinux
@@ -181,6 +183,7 @@ unzip
 unrar
 ttf-vazirmatn
 ttf-vazircode
+ttf-nerd-fonts-symbols-common
 gwenview
 okular
 partitionmanager
